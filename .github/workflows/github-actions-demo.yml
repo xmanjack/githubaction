@@ -1,16 +1,27 @@
 on: [push]
 
-jobs:
-  hello_world_job:
-    container: xmanjack/dotnet-cicd:0.0.1
-    runs-on: ubuntu-latest
 
+jobs:
+  my-job-name:
+    runs-on: ubuntu-latest
     container:
       image: xmanjack/dotnet-cicd:0.0.1
       options: --user root
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+# jobs:
+#   hello_world_job:
+#     container: xmanjack/dotnet-cicd:0.0.1
+#     runs-on: ubuntu-latest
+
+#     container:
+#       image: xmanjack/dotnet-cicd:0.0.1
+#       options: --user root
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v2
     # name: A job to say hello
     # steps:
     #   - uses: actions/checkout@v3
