@@ -13,7 +13,7 @@ jobs:
       - name: run a script
         run: pwd; find .; find /
       - name: test dotnet
-        run: dotnet --help; dotnet -v
+        run: dotnet --help || true; dotnet -v || true
 # jobs:
 #   hello_world_job:
 #     container: xmanjack/dotnet-cicd:0.0.1
